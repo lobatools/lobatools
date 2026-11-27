@@ -1,0 +1,127 @@
+:root {
+  --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-hand: 'Caveat', 'Segoe Script', cursive;
+
+  --ink: #17171a;
+  --ink-dim: #6a6a72;
+  --paper: #ffffff;
+  --mist: #f1f2f4;
+  --postit: #ffe066;
+  --accent: #ec6b43;
+  --accent-ink: #17171a;
+  --accent-shadow: rgba(236, 107, 67, 0.26);
+  --hand: #ec6b43;
+  --note-rule: rgba(23, 23, 26, 0.07);
+  --note-margin: rgba(236, 107, 67, 0.5);
+  --note-tape: rgba(23, 23, 26, 0.09);
+
+  --bar: #17171a;
+  --bar-text: #ffffff;
+  --bar-text-dim: rgba(255, 255, 255, 0.55);
+
+  --dock: rgba(23, 18, 28, 0.6);
+  --dock-border: rgba(255, 255, 255, 0.08);
+
+  --wall-aubergine-top: #371b3f;
+  --wall-aubergine-bottom: #220f29;
+  --wall-aubergine-glow: #46234f;
+  --wall-grape-top: #3a2150;
+  --wall-grape-bottom: #231634;
+  --wall-grape-glow: #4a2a68;
+  --wall-forest-top: #16302a;
+  --wall-forest-bottom: #0b1a16;
+  --wall-forest-glow: #1f4238;
+  --wall-night-top: #26262b;
+  --wall-night-bottom: #141317;
+  --wall-night-glow: #34343c;
+
+  --wall-top: var(--wall-aubergine-top);
+  --wall-bottom: var(--wall-aubergine-bottom);
+  --wall-glow: var(--wall-aubergine-glow);
+
+  --traffic-red: #ff5f57;
+  --traffic-yellow: #febc2e;
+  --traffic-green: #28c840;
+
+  --radius-window: 14px;
+  --radius-icon: 14px;
+  --bar-height: 44px;
+  --dock-width: 88px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.notepaper {
+  position: relative;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 27px,
+      var(--note-margin) 27px,
+      var(--note-margin) 28px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(transparent, transparent 27px, var(--note-rule) 27px, var(--note-rule) 28px);
+  border-radius: 5px;
+  box-shadow: 0 16px 34px rgba(23, 23, 26, 0.18);
+}
+
+.notetape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 92px;
+  height: 22px;
+  transform: translateX(-50%) rotate(-2deg);
+  background: var(--note-tape);
+}
+
+:root[data-wallpaper='grape'] {
+  --wall-top: var(--wall-grape-top);
+  --wall-bottom: var(--wall-grape-bottom);
+  --wall-glow: var(--wall-grape-glow);
+}
+
+:root[data-wallpaper='forest'] {
+  --wall-top: var(--wall-forest-top);
+  --wall-bottom: var(--wall-forest-bottom);
+  --wall-glow: var(--wall-forest-glow);
+}
+
+:root[data-wallpaper='night'] {
+  --wall-top: var(--wall-night-top);
+  --wall-bottom: var(--wall-night-bottom);
+  --wall-glow: var(--wall-night-glow);
+}
+
+:root[data-reduce-motion='true'] *,
+:root[data-reduce-motion='true'] *::before,
+:root[data-reduce-motion='true'] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}

@@ -1,0 +1,18 @@
+.tools {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.tools li {
+  margin: 0 0 10px;
+}
+
+.dim,
+.blurb {
+  color: var(--ink-dim);
+}
+
+.blurb {
+  display: block;
+}

@@ -1,0 +1,62 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  border-top: 1px solid var(--mist);
+}
+
+.list li {
+  border-bottom: 1px solid var(--mist);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 44px;
+  padding: 18px 24px 18px 28px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--ink);
+}
+
+.row:active,
+.row:focus-visible {
+  background: var(--mist);
+  outline: none;
+}
+
+.page,
+.chevron {
+  flex: none;
+  fill: none;
+  stroke: var(--ink-dim);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.excerpt {
+  font-size: 14px;
+  color: var(--ink-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

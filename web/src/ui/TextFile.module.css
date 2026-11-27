@@ -1,0 +1,43 @@
+.file {
+  min-height: 100%;
+  padding: 28px 32px;
+  background: var(--paper);
+  container-type: inline-size;
+}
+
+.layout {
+  display: flex;
+  gap: 40px;
+}
+
+.aside {
+  flex: none;
+  padding-top: 4px;
+}
+
+.aside svg {
+  display: block;
+}
+
+.doc {
+  max-width: 560px;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.doc p {
+  margin: 0 0 16px;
+}
+
+.doc strong {
+  font-weight: 700;
+}
+
+@container (max-width: 520px) {
+  .layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

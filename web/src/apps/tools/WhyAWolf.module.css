@@ -1,0 +1,8 @@
+.wolf {
+  color: var(--accent);
+}
+
+.aside {
+  display: block;
+  color: var(--ink-dim);
+}
